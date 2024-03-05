@@ -91,13 +91,6 @@ a{
     margin: 0 auto; /*margin-inline: auto*/
 }
 
-/** Header y Navegacion **/
-@media (width > 768px){
-    .nav-principal {
-        justify-content: space-between;
-        flex-direction: row;
-    }
-}
 .nav-principal {
     padding: 2rem 0;
     display: flex;
@@ -105,9 +98,11 @@ a{
     flex-direction: column;
     align-items: center;
 }
+/** Header y Navegacion **/
 @media (width > 768px){
-    .hero{
-        height: 55rem;
+    .nav-principal {
+        justify-content: space-between;
+        flex-direction: row;
     }
 }
 .hero{
@@ -116,6 +111,11 @@ a{
     background-repeat: no-repeat;
     background-size: cover;
     height: 25rem;
+}
+@media (width > 768px){
+    .hero{
+        height: 55rem;
+    }
 }
 .contenedor-navegacion {
     border-top: .1rem solid #e1e1e1;
@@ -152,6 +152,13 @@ a{
 }
 
 /** Bloque Nosotros */
+.sobre-nosotros {
+    background-image: linear-gradient( to bottom, transparent 50%, #037bc0 50%, #037bc0 100% ), url(../img/nosotros.jpg);
+    background-position: center, top left;
+    background-repeat: no-repeat;
+    background-size: 100%, 70rem;
+    
+}
 @media (width > 768px){
     .sobre-nosotros{
         background-image: linear-gradient( to right, transparent 50%, #037bc0 50%, #037bc0 100% ), url(../img/nosotros.jpg);
@@ -160,12 +167,9 @@ a{
         background-size: 100%, 120rem;
     }
 }
-.sobre-nosotros {
-    background-image: linear-gradient( to bottom, transparent 50%, #037bc0 50%, #037bc0 100% ), url(../img/nosotros.jpg);
-    background-position: center, top left;
-    background-repeat: no-repeat;
-    background-size: 100%, 70rem;
-   
+.sobre-nosotros-grid{
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
 }
 @media (width > 768px){
     .sobre-nosotros-grid{
@@ -173,20 +177,16 @@ a{
         grid-template-rows: unset;
     }
 }
-.sobre-nosotros-grid{
-    display: grid;
-    grid-template-rows: repeat(2,1fr);
+.texto-nosotros{
+    grid-row: 2/3;
+    padding: 5rem;
+    color: #fff;
 }
 @media (width > 768px){
     .texto-nosotros{
         grid-column: 2/3;
         
     }
-}
-.texto-nosotros{
-    grid-row: 2/3;
-    padding: 5rem;
-    color: #fff;
 }
 /** Listado de Productos **/
 @media (width > 768px){
